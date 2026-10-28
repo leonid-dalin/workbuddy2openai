@@ -75,7 +75,7 @@ python3 -m workbuddy2openai.converter --direct-key ck_yourkeyhere
 What changes in this mode:
 
 - No desktop app or login needed; the key is sent as a plain `Authorization: Bearer` header to `https://www.codebuddy.ai/v2/chat/completions`. Works headless (servers, containers, NAS).
-- `/v1/models` lists the international catalog (verified live 2026-08-31): `auto`, `hy3`, `hy4-preview`, `glm-5.3/5.2/5.1/5v-turbo`, `minimax-m3`, `kimi-k3/k2.7/k2.6`, `deepseek-v4-pro/flash/4.1-flash`, `gpt-5.6-luna/terra/sol`, `gemini-3.1-pro`.
+- `/v1/models` lists the international catalog (verified live 2026-10-26): `auto`, `hy3`, `hy4-preview`, `glm-5.3/5.3-flash/5.2/5.1/5v-turbo`, `minimax-m3/m3.1-flash`, `kimi-k3/k3.1-pro/k2.7/k2.6/k2.5`, `deepseek-v4-pro/flash/4.1-flash`, `step-5-preview`, `gpt-5.6-luna/terra/sol`, `gemini-3.1-pro`, `grok-4.7`.
 - The startup preflight (which expects a desktop session) is skipped.
 
 Backend quirks worth knowing (they produce confusing errors if you meet them blind):

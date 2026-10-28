@@ -52,6 +52,16 @@ class TestModelCatalogs:
         for model in ("gpt-5.6-luna", "gpt-5.6-terra", "gpt-5.6-sol"):
             assert model in converter_module.INTL_MODELS
 
+    def test_international_catalog_contains_step_5_preview(self, converter_module):
+        assert "step-5-preview" in converter_module.INTL_MODELS
+
+    def test_international_catalog_contains_2026_10_additions(self, converter_module):
+        # Verified live against the backend on 2026-10-26; variants without the
+        # suffix (kimi-k3.1, minimax-m3.1, grok-4.7-fast) are 11102 not found.
+        for model in ("glm-5.3-flash", "minimax-m3.1-flash", "kimi-k3.1-pro",
+                      "kimi-k2.5", "grok-4.7"):
+            assert model in converter_module.INTL_MODELS
+
     def test_international_catalog_contains_hy3_lowercase(self, converter_module):
         # Upstream rejects "Hy3"; the catalog must advertise the working id.
         assert "hy3" in converter_module.INTL_MODELS

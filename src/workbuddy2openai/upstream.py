@@ -30,10 +30,11 @@ CN_MODELS = [
 ]
 
 INTL_MODELS = [
-    "auto", "hy3", "hy4-preview", "glm-5.3", "glm-5.2", "glm-5.1", "glm-5v-turbo",
-    "minimax-m3", "kimi-k3", "kimi-k2.7", "kimi-k2.6",
-    "deepseek-v4-pro", "deepseek-v4-flash", "deepseek-v4.1-flash",
-    "gpt-5.6-luna", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3.1-pro",
+    "auto", "hy3", "hy4-preview", "glm-5.3", "glm-5.3-flash", "glm-5.2", "glm-5.1", "glm-5v-turbo",
+    "minimax-m3", "minimax-m3.1-flash", "kimi-k3", "kimi-k3.1-pro", "kimi-k2.7", "kimi-k2.6",
+    "kimi-k2.5",
+    "deepseek-v4-pro", "deepseek-v4-flash", "deepseek-v4.1-flash", "step-5-preview",
+    "gpt-5.6-luna", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3.1-pro", "grok-4.7",
 ]
 
 DEFAULT_MODELS = CN_MODELS
