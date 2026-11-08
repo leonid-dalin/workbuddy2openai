@@ -5,6 +5,8 @@ import time
 
 import pytest
 
+from workbuddy2openai import upstream
+
 
 class TestBackendForDomain:
     def test_workbuddy_domain_maps_to_international_backend(self, converter_module):
@@ -48,24 +50,14 @@ class TestModelCatalogs:
         assert converter_module.INTL_MODELS is not converter_module.CN_MODELS
         assert converter_module.INTL_MODELS != converter_module.CN_MODELS
 
-    def test_international_catalog_contains_gpt56_family(self, converter_module):
-        for model in ("gpt-5.6-luna", "gpt-5.6-terra", "gpt-5.6-sol"):
-            assert model in converter_module.INTL_MODELS
-
-    def test_international_catalog_contains_step_5_preview(self, converter_module):
-        assert "step-5-preview" in converter_module.INTL_MODELS
-
-    def test_international_catalog_contains_2026_10_additions(self, converter_module):
-        # Verified live against the backend on 2026-10-26; variants without the
-        # suffix (kimi-k3.1, minimax-m3.1, grok-4.7-fast) are 11102 not found.
-        for model in ("glm-5.3-flash", "minimax-m3.1-flash", "kimi-k3.1-pro",
-                      "kimi-k2.5", "grok-4.7"):
-            assert model in converter_module.INTL_MODELS
-
-    def test_international_catalog_contains_hy3_lowercase(self, converter_module):
-        # Upstream rejects "Hy3"; the catalog must advertise the working id.
-        assert "hy3" in converter_module.INTL_MODELS
-        assert "Hy3" not in converter_module.INTL_MODELS
+    def test_international_catalog_matches_current_models(self):
+        assert upstream.INTL_MODELS == [
+            "auto", "hy4", "minimax-m3.1-flash", "kimi-k3",
+            "kimi-k3.1-pro-highspeed", "kimi-k3.1-pro", "glm-5.3-flash", "glm-5.3",
+            "gemini-3.8-flash", "grok-4.7", "gpt-5.6-luna", "gpt-5.6-terra",
+            "gpt-5.6-sol", "gpt-6-luna", "gpt-6-sol", "gpt-6.1-sol", "gpt-6-astra",
+            "deepseek-v4.1-flash",
+        ]
 
     def test_auto_present_in_both_catalogs(self, converter_module):
         assert "auto" in converter_module.CN_MODELS

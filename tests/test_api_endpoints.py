@@ -123,6 +123,8 @@ class TestListModels:
         assert response.status_code == 200
         ids = [m["id"] for m in response.json()["data"]]
         assert ids == converter_module.INTL_MODELS
+        assert "hy4" in ids
+        assert "hy4-preview" not in ids
         assert "gpt-5.6-luna" in ids
         assert "minimax-m3-pay" not in ids
 

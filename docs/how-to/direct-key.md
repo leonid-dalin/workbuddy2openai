@@ -21,13 +21,15 @@ python3 -m workbuddy2openai.converter
 
 The startup preflight, which expects a desktop session, is skipped automatically in this mode. `/v1/models` now lists the international catalog.
 
+The catalog contains `auto`, `hy4`, `minimax-m3.1-flash`, `kimi-k3`, `kimi-k3.1-pro-highspeed`, `kimi-k3.1-pro`, `glm-5.3-flash`, `glm-5.3`, `gemini-3.8-flash`, `grok-4.7`, `gpt-5.6-luna`, `gpt-5.6-terra`, `gpt-5.6-sol`, `gpt-6-luna`, `gpt-6-sol`, `gpt-6.1-sol`, `gpt-6-astra`, and `deepseek-v4.1-flash`. IDs are lowercase; availability depends on your subscription.
+
 ## 3. Verify
 
 ```bash
 curl http://127.0.0.1:8787/v1/models
 curl http://127.0.0.1:8787/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -d '{"model":"hy3","messages":[{"role":"user","content":"Reply: pong"}]}'
+  -d '{"model":"hy4","messages":[{"role":"user","content":"Reply: pong"}]}'
 ```
 
 ## Notes for unattended hosts
