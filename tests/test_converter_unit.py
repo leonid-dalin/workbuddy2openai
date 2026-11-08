@@ -52,7 +52,7 @@ class TestModelCatalogs:
 
     def test_international_catalog_matches_current_models(self):
         assert upstream.INTL_MODELS == [
-            "auto", "hy4", "minimax-m3.1-flash", "kimi-k3",
+            "auto", "hy4", "hy4-free", "minimax-m3.1-flash", "kimi-k3",
             "kimi-k3.1-pro-highspeed", "kimi-k3.1-pro", "glm-5.3-flash", "glm-5.3",
             "gemini-3.8-flash", "grok-4.7", "gpt-5.6-luna", "gpt-5.6-terra",
             "gpt-5.6-sol", "gpt-6-luna", "gpt-6-sol", "gpt-6.1-sol", "gpt-6-astra",

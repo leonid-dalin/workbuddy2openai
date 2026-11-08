@@ -171,7 +171,7 @@ python3 -m workbuddy2openai.converter [--host HOST] [--port PORT] [--api-key KEY
 
 桌面端模式（中国区）：`glm-5.2`、`glm-5.1`、`glm-5v-turbo`、`kimi-k2.7`、`kimi-k2.6`、`kimi-k2.5`、`deepseek-v4-pro`、`deepseek-v4-flash`、`minimax-m3-pay`、`hy3-preview-agent`、`auto`
 
-API 密钥模式（国际版）：`auto`、`hy4`、`minimax-m3.1-flash`、`kimi-k3`、`kimi-k3.1-pro-highspeed`、`kimi-k3.1-pro`、`glm-5.3-flash`、`glm-5.3`、`gemini-3.8-flash`、`grok-4.7`、`gpt-5.6-luna`、`gpt-5.6-terra`、`gpt-5.6-sol`、`gpt-6-luna`、`gpt-6-sol`、`gpt-6.1-sol`、`gpt-6-astra`、`deepseek-v4.1-flash`
+API 密钥模式（国际版）：`auto`、`hy4`、`hy4-free`、`minimax-m3.1-flash`、`kimi-k3`、`kimi-k3.1-pro-highspeed`、`kimi-k3.1-pro`、`glm-5.3-flash`、`glm-5.3`、`gemini-3.8-flash`、`grok-4.7`、`gpt-5.6-luna`、`gpt-5.6-terra`、`gpt-5.6-sol`、`gpt-6-luna`、`gpt-6-sol`、`gpt-6.1-sol`、`gpt-6-astra`、`deepseek-v4.1-flash`
 
 具体可用性以你的订阅为准；模型 ID 大小写不敏感，拼写需与目录一致
 
