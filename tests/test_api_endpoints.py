@@ -351,7 +351,7 @@ class TestCollectStreamAggregation:
         sent = upstream.last["body"]
         assert sent["model"] == "hy3"
 
-    def test_hy4_free_routes_to_hy4_upstream(
+    def test_hy4_free_id_is_preserved_upstream(
         self, direct_key_client, converter_module, upstream_ok
     ):
         upstream = upstream_ok([sse_chunk("OK"), sse_finish()])
@@ -359,7 +359,7 @@ class TestCollectStreamAggregation:
             "model": "hy4-free",
             "messages": [{"role": "user", "content": "hi"}],
         })
-        assert upstream.last["body"]["model"] == "hy4"
+        assert upstream.last["body"]["model"] == "hy4-free"
 
     def test_stream_options_include_usage_injected_when_absent(
         self, direct_key_client, converter_module, upstream_ok

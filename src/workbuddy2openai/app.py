@@ -29,7 +29,6 @@ from workbuddy2openai.upstream import (
     DEFAULT_MODELS,
     DIRECT_KEY_BACKEND,
     INTL_MODELS,
-    MODEL_ALIASES,
     PASSTHROUGH_BODY_KEYS,
     Route,
     _UpstreamGateError,
@@ -206,8 +205,7 @@ async def chat_completions(request: Request,
 
     client_wants_stream = bool(payload.get("stream"))
     body = {k: payload[k] for k in PASSTHROUGH_BODY_KEYS if k in payload}
-    model_id = str(body.get("model", "auto")).lower()
-    body["model"] = MODEL_ALIASES.get(model_id, model_id)
+    body["model"] = str(body.get("model", "auto")).lower()
     body["stream"] = True
     if "stream_options" not in body:
         body["stream_options"] = {"include_usage": True}

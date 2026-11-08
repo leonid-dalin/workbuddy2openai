@@ -36,8 +36,6 @@ INTL_MODELS = [
     "gpt-6.1-sol", "gpt-6-astra", "deepseek-v4.1-flash",
 ]
 
-MODEL_ALIASES = {"hy4-free": "hy4"}
-
 DEFAULT_MODELS = CN_MODELS
 
 PASSTHROUGH_BODY_KEYS = {
