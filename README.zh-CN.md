@@ -119,7 +119,7 @@ python3 -m workbuddy2openai.converter --direct-key ck_你的密钥
 该模式下：
 
 - 无需桌面端登录；密钥以 `Authorization: Bearer` 直接发往 `https://www.codebuddy.ai/v2/chat/completions`。可无界面部署（服务器、容器、NAS）
-- `/v1/models` 返回国际版目录（2026-08-31 实测）：`auto`、`hy3`、`hy4-preview`、`glm-5.3/5.2/5.1/5v-turbo`、`minimax-m3`、`kimi-k3/k2.7/k2.6`、`deepseek-v4-pro/flash/4.1-flash`、`gpt-5.6-luna/terra/sol`、`gemini-3.1-pro`
+- `/v1/models` 返回国际版目录，完整列表见下方「可用模型」
 - 启动预检（面向桌面端会话）自动跳过
 
 后端的几个坑（先知道，免得对着报错发懵）：
@@ -171,7 +171,7 @@ python3 -m workbuddy2openai.converter [--host HOST] [--port PORT] [--api-key KEY
 
 桌面端模式（中国区）：`glm-5.2`、`glm-5.1`、`glm-5v-turbo`、`kimi-k2.7`、`kimi-k2.6`、`kimi-k2.5`、`deepseek-v4-pro`、`deepseek-v4-flash`、`minimax-m3-pay`、`hy3-preview-agent`、`auto`
 
-API 密钥模式（国际版，2026-08-31 实测）：`auto`、`hy3`、`hy4-preview`、`glm-5.3`、`glm-5.2`、`glm-5.1`、`glm-5v-turbo`、`minimax-m3`、`kimi-k3`、`kimi-k2.7`、`kimi-k2.6`、`deepseek-v4-pro`、`deepseek-v4-flash`、`deepseek-v4.1-flash`、`gpt-5.6-luna`、`gpt-5.6-terra`、`gpt-5.6-sol`、`gemini-3.1-pro`
+API 密钥模式（国际版）：`auto`、`hy4`、`minimax-m3.1-flash`、`kimi-k3`、`kimi-k3.1-pro-highspeed`、`kimi-k3.1-pro`、`glm-5.3-flash`、`glm-5.3`、`gemini-3.8-flash`、`grok-4.7`、`gpt-5.6-luna`、`gpt-5.6-terra`、`gpt-5.6-sol`、`gpt-6-luna`、`gpt-6-sol`、`gpt-6.1-sol`、`gpt-6-astra`、`deepseek-v4.1-flash`
 
 具体可用性以你的订阅为准；模型 ID 大小写不敏感，拼写需与目录一致
 
