@@ -21,7 +21,7 @@ python3 -m workbuddy2openai.converter
 
 The startup preflight, which expects a desktop session, is skipped automatically in this mode. `/v1/models` now lists the international catalog.
 
-The catalog contains `auto`, `hy4`, `hy4-free`, `minimax-m3.1-flash`, `kimi-k3`, `kimi-k3.1-pro-highspeed`, `kimi-k3.1-pro`, `glm-5.3-flash`, `glm-5.3`, `gemini-3.8-flash`, `grok-4.7`, `gpt-5.6-luna`, `gpt-5.6-terra`, `gpt-5.6-sol`, `gpt-6-luna`, `gpt-6-sol`, `gpt-6.1-sol`, `gpt-6-astra`, and `deepseek-v4.1-flash`. IDs are lowercase; availability depends on your subscription
+The catalog contains `auto`, `hy4`, `hy4-free`, `minimax-m3.1-flash`, `kimi-k3`, `kimi-k3.1-pro-highspeed`, `kimi-k3.1-pro`, `glm-5.3-flash`, `glm-5.3`, `gemini-3.8-flash`, `grok-4.7`, `gpt-5.6-luna`, `gpt-5.6-terra`, `gpt-5.6-sol`, `gpt-6-luna`, `gpt-6-sol`, `gpt-6.1-sol`, `gpt-6-astra`, and `deepseek-v4.1-flash`. The proxy sends `hy4-free` upstream as `hy4`; WorkBuddy's free-use entitlement determines whether the request is free.
 
 ## 3. Verify
 
